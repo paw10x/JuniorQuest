@@ -61,7 +61,7 @@ Jak oceniamy poprawność odpowiedzi modelu? Jakie metryki przyjmujemy i dlaczeg
 
 ## Najtrudniejsze notatki
 
-Model miał największe problemy z wykrywaniem wind, np. "Winda nie działa" model często zapisywał jako elevator=true.
+Model miał największe problemy z wykrywaniem wind, np. "Winda nie działa" model często zapisywał jako elevator=null lub elevator=false.
 Model "drugie lub trzecie piętro" często zapisywał jako floor=2 lub floor=3 zamiast floor=null, nie rozpoznając, że nie jest
 wiadomo, o które piętro chodzi. "Mieszkanie 15, domofon 15" model interpretował jako floor=15. Z niewiadomych przyczyn "winda po prawej"
 często było rozpoznawane jako winda=null.
