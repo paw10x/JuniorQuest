@@ -45,10 +45,10 @@ Jak oceniamy poprawność odpowiedzi modelu? Jakie metryki przyjmujemy i dlaczeg
 | Temperature | Exact match | Powtarzalne notatki |
 |-------------|-------------|---------------------|
 | 0.0 | 10%         | 10/10               |
-| 0.5 | 28%         | 0/10                |
-| 1.0 | 18%         | 0/10                |
+| 0.5 | 40%         | 0/10                |
+| 1.0 | 20%         | 0/10                |
 
-**Wnioski:** Parametr temperatury wynoszący 0.5 okazał się najbardziej optymalny, zapewniając najwyższą dokładność (Exact match 28%) przy całkowitej eliminacji powtarzalnych, zapętlonych odpowiedzi (0/10). Zerowa temperatura (T=0.0) zagwarantowała co prawda 100% powtarzalności notatek, jednak drastycznie obniżyła precyzję modelu (tylko 10%). Wyższe wartości temperatury (T=1.0) wprowadziły zbyt dużą losowość, co przełożyło się na spadek dokładności do 18%.
+**Wnioski:** Parametr temperatury wynoszący 0.5 okazał się najbardziej optymalny, zapewniając najwyższą dokładność (Exact match 28%) przy całkowitej eliminacji powtarzalnych, zapętlonych odpowiedzi (0/10). Zerowa temperatura (T=0.0) zagwarantowała co prawda 100% powtarzalności notatek, jednak drastycznie obniżyła precyzję modelu (tylko 10%). Wyższe wartości temperatury (T=1.0) wprowadziły zbyt dużą losowość, co przełożyło się na spadek dokładności do 20%.
 
 ## EXP-04 — Structured output — JSON i walidacja
 
