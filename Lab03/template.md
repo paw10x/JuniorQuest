@@ -9,7 +9,7 @@
 |----------|-----------------------------------|
 | Wersja Ollama | 0.40.8                            |
 | Sprzęt (CPU/GPU, RAM) | Intel Core Ultra 5 125H, 16GB RAM |
-| Liczba dostępnych notatek | 170                               |
+| Liczba dostępnych notatek | 10                               |
 
 ## EXP-00 — Sposób oceny wyników
 
