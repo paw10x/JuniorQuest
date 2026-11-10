@@ -4,4 +4,4 @@
  **Martyna Budrewicz** i **Paweł Nowak**
 
  ## Wizja
- - [Wizja](vision.md)
+ - [Wizja](docs/vision.md)
