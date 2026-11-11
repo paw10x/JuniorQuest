@@ -20,15 +20,24 @@
 | `src/data/database/` | Połączenie z bazą i dostęp do danych. Rozważany dostawca to Firebase. |
 | `src/config/` | Konfiguracja połączenia. Klucz będzie dostarczany poza repozytorium. |
 
-## Pulpit w terminalu
+## Uruchamianie pulpitu
 
-Uruchom z katalogu głównego projektu. Wymagany jest .NET 10 SDK.
+W Riderze kliknij prawym przyciskiem projekt **Dashboard** w oknie Solution
+i wybierz **Run 'Dashboard'**.
+
+Możesz też uruchomić go z terminala, z katalogu głównego repozytorium:
 
 ```sh
 dotnet run --project src/ui/dashboard
 ```
 
-Dodaj `-- --demo`, aby zobaczyć przykładowe aktualizacje statusów aplikacji.
+Aby zobaczyć przykładowe aktualizacje statusów aplikacji:
+
+```sh
+dotnet run --project src/ui/dashboard -- --demo
+```
+
+`OfferIngestion` jest biblioteką i nie można go jeszcze uruchomić samodzielnie.
 
 ## Pobieranie ofert
 
