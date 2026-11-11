@@ -17,7 +17,7 @@
 | `src/features/user-profile/` | Profil użytkownika wykorzystywany przy dopasowywaniu ofert i CV. |
 | `src/features/cv-personalization/` | Dostosowywanie CV do wymagań wybranej oferty. |
 | `src/features/agent/` | Koordynacja zadań automatycznych. |
-| `src/data/database/` | Połączenie z bazą i dostęp do danych. Rozważany dostawca to Firebase. |
+| `src/data/database/` | Adapter C# do centralnej bazy Firebase SQL Connect. |
 | `src/config/` | Konfiguracja połączenia. Klucz będzie dostarczany poza repozytorium. |
 
 ## Uruchamianie pulpitu
@@ -40,5 +40,8 @@ dotnet run --project src/ui/dashboard -- --demo
 `OfferIngestion` jest biblioteką i nie można go jeszcze uruchomić samodzielnie.
 
 ## Pobieranie ofert
+
+Konfiguracja Firebase SQL Connect, emulator i test połączenia w Riderze:
+[docs/firebase.md](docs/firebase.md).
 
 Instrukcja uruchomienia i schemat danych są w [dokumentacji agenta](src/features/agent/offer-ingestion/README.md).

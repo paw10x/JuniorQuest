@@ -1,0 +1,27 @@
+# Shared offers only; user profiles and matching scores belong elsewhere.
+# String IDs preserve the existing C# contract. Compensation is JSON to preserve decimals.
+type JobOffer @table(key: "id") {
+  id: String!
+  title: String!
+  company: String!
+  postingUrl: String! @unique
+  description: String!
+  discoveredAt: Timestamp! @index
+  externalId: String
+  locations: [String!]!
+  workplaceType: String
+  employmentType: String
+  workSchedule: String
+  contractTypes: [String!]!
+  seniorityLevel: String
+  status: String!
+  department: String
+  postingLanguage: String
+  requiredLanguages: [String!]!
+  requirements: [String!]!
+  requiredSkills: [String!]!
+  preferredSkills: [String!]!
+  compensation: Any
+  publishedAt: Timestamp
+  applicationDeadline: Timestamp
+}

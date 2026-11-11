@@ -23,11 +23,9 @@ public sealed record JobOffer(
     string Company,
     string PostingUrl,
     string Description,
-    DateTimeOffset FirstSeenAt,
-    DateTimeOffset LastSeenAt)
+    DateTimeOffset DiscoveredAt)
 {
     public string? ExternalId { get; init; }
-    public string? ApplicationUrl { get; init; }
     public IReadOnlyList<string> Locations { get; init; } = [];
     public WorkplaceType? WorkplaceType { get; init; }
     public EmploymentType? EmploymentType { get; init; }
@@ -43,6 +41,5 @@ public sealed record JobOffer(
     public IReadOnlyList<string> PreferredSkills { get; init; } = [];
     public Compensation? Compensation { get; init; }
     public DateTimeOffset? PublishedAt { get; init; }
-    public DateTimeOffset? SourceUpdatedAt { get; init; }
     public DateTimeOffset? ApplicationDeadline { get; init; }
 }

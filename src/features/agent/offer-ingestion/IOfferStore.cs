@@ -1,6 +1,6 @@
 namespace JuniorQuest.OfferIngestion;
 
-// Implement with Firebase once the central database is configured.
+// Firebase SQL Connect implementation lives in src/data/database.
 public interface IOfferStore
 {
     Task UpsertManyAsync(

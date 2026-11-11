@@ -1,0 +1,13 @@
+specVersion: "v1"
+serviceId: "juniorquest-service"
+location: "europe-central2"
+schemas:
+  - source: "./schema"
+    datasource:
+      postgresql:
+        database: "juniorquest-central-database"
+        cloudSql:
+          instanceId: "juniorquest-instance"
+          # schemaValidation: "STRICT"     # STRICT mode makes Postgres schema match Data Connect exactly.
+          # schemaValidation: "COMPATIBLE" # COMPATIBLE mode makes Postgres schema compatible with Data Connect.
+connectorDirs: ["./offers"]

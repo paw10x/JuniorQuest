@@ -1,0 +1,84 @@
+# Only trusted agents with Google Cloud IAM credentials can execute these operations.
+query GetOffer($id: String!) @auth(level: NO_ACCESS) {
+  jobOffer(id: $id) {
+    id
+    title
+    company
+    postingUrl
+    description
+    discoveredAt
+    externalId
+    locations
+    workplaceType
+    employmentType
+    workSchedule
+    contractTypes
+    seniorityLevel
+    status
+    department
+    postingLanguage
+    requiredLanguages
+    requirements
+    requiredSkills
+    preferredSkills
+    compensation
+    publishedAt
+    applicationDeadline
+  }
+}
+
+query FindOfferByUrl($postingUrl: String!) @auth(level: NO_ACCESS) {
+  jobOffers(where: {postingUrl: {eq: $postingUrl}}, limit: 1) {
+    id
+    title
+    company
+    postingUrl
+    description
+    discoveredAt
+    externalId
+    locations
+    workplaceType
+    employmentType
+    workSchedule
+    contractTypes
+    seniorityLevel
+    status
+    department
+    postingLanguage
+    requiredLanguages
+    requirements
+    requiredSkills
+    preferredSkills
+    compensation
+    publishedAt
+    applicationDeadline
+  }
+}
+
+query ListOffers($limit: Int! = 100, $offset: Int! = 0) @auth(level: NO_ACCESS) {
+  jobOffers(orderBy: [{discoveredAt: DESC}, {id: ASC}], limit: $limit, offset: $offset) {
+    id
+    title
+    company
+    postingUrl
+    description
+    discoveredAt
+    externalId
+    locations
+    workplaceType
+    employmentType
+    workSchedule
+    contractTypes
+    seniorityLevel
+    status
+    department
+    postingLanguage
+    requiredLanguages
+    requirements
+    requiredSkills
+    preferredSkills
+    compensation
+    publishedAt
+    applicationDeadline
+  }
+}

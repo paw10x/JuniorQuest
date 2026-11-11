@@ -1,0 +1,54 @@
+mutation UpsertOffer(
+  $id: String!
+  $title: String!
+  $company: String!
+  $postingUrl: String!
+  $description: String!
+  $discoveredAt: Timestamp!
+  $externalId: String
+  $locations: [String!]!
+  $workplaceType: String
+  $employmentType: String
+  $workSchedule: String
+  $contractTypes: [String!]!
+  $seniorityLevel: String
+  $status: String!
+  $department: String
+  $postingLanguage: String
+  $requiredLanguages: [String!]!
+  $requirements: [String!]!
+  $requiredSkills: [String!]!
+  $preferredSkills: [String!]!
+  $compensation: Any
+  $publishedAt: Timestamp
+  $applicationDeadline: Timestamp
+) @auth(level: NO_ACCESS) @transaction {
+  query @redact {
+    existing: jobOffer(id: $id) { discoveredAt }
+  }
+  jobOffer_upsert(data: {
+    id: $id
+    title: $title
+    company: $company
+    postingUrl: $postingUrl
+    description: $description
+    discoveredAt_expr: "response.query.existing != null ? response.query.existing.discoveredAt : vars.discoveredAt"
+    externalId: $externalId
+    locations: $locations
+    workplaceType: $workplaceType
+    employmentType: $employmentType
+    workSchedule: $workSchedule
+    contractTypes: $contractTypes
+    seniorityLevel: $seniorityLevel
+    status: $status
+    department: $department
+    postingLanguage: $postingLanguage
+    requiredLanguages: $requiredLanguages
+    requirements: $requirements
+    requiredSkills: $requiredSkills
+    preferredSkills: $preferredSkills
+    compensation: $compensation
+    publishedAt: $publishedAt
+    applicationDeadline: $applicationDeadline
+  })
+}
